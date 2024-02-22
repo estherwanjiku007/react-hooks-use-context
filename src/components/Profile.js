@@ -1,7 +1,10 @@
 import React from "react";
 import Interests from "./Interests";
+import { useContext } from "react";
+import { userContext } from "./User";
 
-function Profile({ user, theme }) {
+function Profile({ theme }) {
+  const user=useContext(userContext)
   if (!user) return <h2>Please Login To View Profile</h2>;
   return (
     <div>
