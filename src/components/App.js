@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import Profile from "./Profile";
-import { userProvider } from "./User";
+import { UserProvider } from "../context/User";
 function App() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   //const [user, setUser] = useState(null);
   return (
     <main className={theme}>
-      <userProvider>
+      <UserProvider>
       <Header theme={theme} setTheme={setTheme}  />
       <Profile theme={theme} />
-      </userProvider>
+      </UserProvider>
     </main>
   );
 }
